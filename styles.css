@@ -11,6 +11,32 @@ a{
     text-decoration: none;
 }
 
+hr {
+    border: 0;
+    height: 2px;
+    margin:18px 0;
+    position:relative;
+background: -moz-linear-gradient(left, rgba(218, 165, 32, 0) 0%, rgba(218, 165, 32, 0) 15%, rgba(218, 165, 32, 0.65) 50%, rgba(218, 165, 32, 0) 85%, rgba(218, 165, 32, 0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(218, 165, 32, 0)), color-stop(15%,rgba(218, 165, 32, 0)), color-stop(50%,rgba(218, 165, 32, 0.65)), color-stop(85%,rgba(218, 165, 32, 0)), color-stop(100%,rgba(218, 165, 32, 0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left, rgba(218, 165, 32, 0) 0%,rgba(218, 165, 32, 0) 15%,rgba(218, 165, 32, 0.65) 50%,rgba(218, 165, 32, 0) 85%,rgba(218, 165, 32, 0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left, rgba(218, 165, 32, 0) 0%,rgba(218, 165, 32, 0) 15%,rgba(218, 165, 32, 0.65) 50%,rgba(218, 165, 32, 0) 85%,rgba(218, 165, 32, 0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left, rgba(218, 165, 32, 0) 0%,rgba(218, 165, 32, 0) 15%,rgba(218, 165, 32, 0.65) 50%,rgba(218, 165, 32, 0) 85%,rgba(218, 165, 32, 0) 100%); /* IE10+ */
+background: linear-gradient(left, rgba(218, 165, 32, 0) 0%,rgba(218, 165, 32, 0) 15%,rgba(218, 165, 32, 0.65) 50%,rgba(218, 165, 32, 0) 85%,rgba(218, 165, 32, 0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ff0000', endColorstr='#00ff0000',GradientType=1 ); /* IE6-9 */
+}
+
+hr:before {
+    content: "";
+    display: block;
+    border-top: solid 1px rgba(218, 165, 32,0.100);
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+}
+
+
 
 /* HEADER */
 .navbar-header{
@@ -21,7 +47,7 @@ a{
     align-items: center;
     position:fixed;
     width:100%;
-    border-bottom:goldenrod solid 3px;
+    border-bottom:rgb(218, 165, 32) solid 3px;
     transition: 1s;
     z-index:100;
 }
@@ -68,6 +94,11 @@ main h2{
     color:goldenrod;
     font-size:36px;
     font-weight: 500;
+}
+main h3{
+    text-align: center;
+    color:#333;
+    font-size:24px;
 }
 /* INICIO */
 
@@ -238,11 +269,15 @@ main h2{
 
 /*RESERVA*/
 .reserva{
+    margin-bottom:20px;
+}
+.contact-grid{
+    width:95%;
     display:grid;
     grid-template-columns: repeat(2,1fr)
 }
 /* Style inputs with type="text", select elements and textareas */
-input[type=text], input[type=email], input[type=tel], select, textarea {
+    input[type=text], input[type=email], input[type=tel], select, textarea {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */ 
     border: 1px solid #ccc; /* Gray border */
@@ -251,10 +286,10 @@ input[type=text], input[type=email], input[type=tel], select, textarea {
     margin-top: 6px; /* Add a top margin */
     margin-bottom: 16px; /* Bottom margin */
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
-  
-  /* Style the submit button with a specific background color etc */
-  input[type=submit] {
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
     background-color: rgba(218, 165, 32, 0.75);
     color: white;
     font-size:20px;
@@ -262,25 +297,43 @@ input[type=text], input[type=email], input[type=tel], select, textarea {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  /* When moving the mouse over the submit button, add a darker green color */
-  input[type=submit]:hover {
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
     background-color: rgba(218, 165, 32);
-  }
-  
-  /* Add a background color and some padding around the form */
-  .contact-form-container {
+}
+
+/* Add a background color and some padding around the form */
+.contact-form-container {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-    width:90%;
+    width:100%;
     max-width: 300px;
     margin:auto;
     margin-bottom:20px;
     margin-top: 20px;
-  }
+}
 
+.contact-content{
+    list-style: none;
+    font-size: 20px;
+}
+.contact-section{
+    align-self: center;
+    justify-self:center;
+    display:grid;
+    grid-gap:8px;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.contact-info{
+    text-align:center;
+}
+.my-portrait{
+    width:250px;
+}
 /* FOOTER */
 footer ul{
     display: flex;
@@ -320,12 +373,11 @@ footer .copyright{
     border-radius: 50px;
     text-align: center;
     cursor: pointer;
-    box-shadow: 2px 2px 3px #999;
-    opacity: 0.7;
+    opacity: 1;
     transition:0.5s;
 }
 .wa-button:hover{
-    opacity:1;
+    opacity:0.8;
 }
 
 .wa-button-icon{
@@ -346,6 +398,14 @@ footer .copyright{
     
     .servicios-grid{
         grid-template-columns: repeat(2,1fr)
+    }
+    
+    /* RESERVA */
+    .contact-grid{
+        grid-template-columns: repeat(1,1fr)
+    }
+    .contact-section{
+        grid-template-columns: repeat(1,1fr)
     }
 }
 @media (max-width: 600px){
@@ -404,6 +464,7 @@ footer .copyright{
         font-size:12px;
     }
 
+
     /* WHATSAPP button */
     .wa-button{
         width: 35px;
@@ -419,4 +480,13 @@ footer .copyright{
         font-size:12px;
     }
 }
-
+@media (max-width: 480px){
+    .description{
+        font-size:10px;
+    }
+}
+@media (max-width: 380px){
+    .description{
+        font-size:8px;
+    }
+}

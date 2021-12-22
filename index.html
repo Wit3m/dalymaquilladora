@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Maquillaje personalizado y a domicilio en la CDMX. Reserva tu cita a domicilio con una maquillista profesional">
+    <meta name="keywords" content="Maquillaje, Maquillista, Makeup, Boda, 15 años, eventos sociales,">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Daniela Maquillista Profesional</title>
   </head>
@@ -27,7 +31,7 @@
           <!-- <img class="bg-img" src="img/pexels-anderson-guerra-1115128.jpg" alt="Make up tools">
           -->
           <div class="bg-img">
-            <h1>Tu maquillaje a domicilio <br>para eventos sociales</h1>
+            <h1>Tu maquillaje a domicilio<br>para eventos sociales<br>en la CDMX</h1>
             <a class="button" href="#reserva">RESERVA AHORA</a>
           </div>
         </article>
@@ -36,32 +40,32 @@
           <h2>Un maquillaje personalizado</h2>
           <div class="servicios-grid">
             <section class="service-list">
-              <i class="service-num">1</i>
+              <span class="service-num">1</span>
               <h3>Diagnostico</h3>
               <p>Estudio de la cara y del tono de piel, consejos, psychología</p>
             </section>
             <section class="service-list">
-              <i class="service-num">2</i>
+              <span class="service-num">2</span>
               <h3>Limpieza</h3>
               <p>Limpieza de la cara todo bonito</p>
             </section>
             <section class="service-list">
-              <i class="service-num">3</i>
+              <span class="service-num">3</span>
               <h3>Hidratación</h3>
               <p>Agua en la cara e hidratación</p>
             </section>
             <section class="service-list">
-              <i class="service-num">4</i>
+              <span class="service-num">4</span>
               <h3>Fondo</h3>
               <p>Tono de piel, aplicación del fondo</p>
             </section>
             <section class="service-list">
-              <i class="service-num">5</i>
+              <span class="service-num">5</span>
               <h3>Medio</h3>
               <p>Cachetes, colores, muy bonito</p>
             </section>
             <section class="service-list">
-              <i class="service-num">6</i>
+              <span class="service-num">6</span>
               <h3>Finición</h3>
               <p>Ojos y boca, cejas, labial</p>
             </section>
@@ -90,7 +94,7 @@
               <div class="mySlides fade">
                 <div class="numbertext">2 / 3</div>
                 <img src="img/pexels-freestocksorg-457701.jpg" style="width:100%">
-                <div class="title">Completo</div>
+                <div class="title">Tradicional</div>
                 <div class="description">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                   Dicta sapiente ut soluta magnam porro minus. <br>
@@ -127,33 +131,38 @@
             </div>
           </div>
         </article>
+
+        <hr>
         <article id="reserva" class="reserva">
-          <div class="contact-form-container">
-            <form action="mailto:muleswitem@gmail.com">
-          
-              <label for="name">Nombre</label>
-              <input type="text" id="name" name="name" required>
+          <h2>¡Haz tu cita!</h2>
+          <div class=contact-grid>
+            <section class="contact-form-container">
+              <form method="post" action="https://getform.io/f/0320df70-9e17-458a-9d36-03e688a14070">
+                <h3>Contáctanos</h3>
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required>
 
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-              
-              <label for="tel">WhatsApp</label>
-              <input type="tel" id="tel" name="tel" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="tel">Télefono</label>
+                <input type="tel" id="tel" name="tel" required>
 
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" style="height:70px" required></textarea>
-          
-              <input type="submit" value="Enviar">
-            </form>
-          </div>
-          
-          <div class="contact-list">
-            <ul>
-              <li class="contact-title">WhatsApp</li>
-              <li class="contact-content">+52 55 4864 6907</li>
-              <li class="contact-title">Email</li>
-              <li class="contact-content">micorreo@gmail.com</li>
-            </ul>
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" style="height:70px" required></textarea>
+            
+                <input type="submit" value="Enviar">
+              </form>
+            </section>
+            <section class="contact-section">
+              <div class="contact-info">
+                <h3>Télefono WhatsApp</h3>
+                <p class="contact-content"><a href="tel:5548646907">55 4864 6907</a></p>
+                <h3>Email</h3>
+                <p class="contact-content"><a href="mailto:micorreo@gmail.com">micorreo@gmail.com</a></p>
+              </div>
+              <img class="my-portrait" src="img/daniela-maquillista-profesional.jpeg" alt="Daniela maquillista profesional a domicilio">
+            </section>
           </div>
         </article>
 <!-- 
@@ -175,6 +184,22 @@
             fugiat! At, recusandae.</p>
         </article> -->
 
+        <!-- <article id="about">
+          <h2>¿Quién soy?</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Reiciendis quibusdam provident, exercitationem ducimus non
+             nisi corrupti natus repellendus possimus porro adipisci deserunt
+             doloribus cumque dicta laboriosam ad, voluptatum eaque eveniet!</p>
+        </article> -->
+
+        <!-- <article id="course">
+          <h2>Reserva tu clase de automaquillaje</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Reiciendis quibusdam provident, exercitationem ducimus non
+             nisi corrupti natus repellendus possimus porro adipisci deserunt
+             doloribus cumque dicta laboriosam ad, voluptatum eaque eveniet!</p>
+        </article> -->
+
         <a href="https://wa.me/00525548646907?text=Buenos%20días,%20quisiera%20tener%20más%20información%20sobre%20sus%20servicios."
           class="wa-button" target="_blank">
           <img class="wa-button-icon"
@@ -183,6 +208,7 @@
           />
         </a>
       </main>
+      <hr>
       <footer>
         <ul>
           <li><a href="https://www.instagram.com">
