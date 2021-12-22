@@ -322,7 +322,6 @@ input[type=submit]:hover {
 }
 .contact-section{
     align-self: center;
-    justify-self:center;
     display:grid;
     grid-gap:8px;
     grid-template-columns: repeat(2,1fr);
@@ -330,9 +329,11 @@ input[type=submit]:hover {
 
 .contact-info{
     text-align:center;
+    justify-self:center;
 }
 .my-portrait{
-    width:250px;
+    width:300px;
+    justify-self:center;
 }
 /* FOOTER */
 footer ul{
@@ -385,7 +386,11 @@ footer .copyright{
     width: 52px;
     height: 52px;
 }
-
+@media (max-width: 1200px){
+    .my-portrait{
+        width:200px;
+    }
+}
 @media (max-width: 900px){
     /* INICIO */ 
     .inicio h1{
@@ -406,6 +411,9 @@ footer .copyright{
     }
     .contact-section{
         grid-template-columns: repeat(1,1fr)
+    }
+    .my-portrait{
+        width:300px;
     }
 }
 @media (max-width: 600px){
