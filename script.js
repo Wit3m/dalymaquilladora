@@ -6,7 +6,7 @@ window.onscroll = function() {
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("navbar-header").style.top = "0";
   } else {
-    document.getElementById("navbar-header").style.top = "-75px";
+    document.getElementById("navbar-header").style.top = "-200px";
   }
   prevScrollpos = currentScrollPos;
 }
@@ -17,7 +17,7 @@ const toggleButton = document.getElementsByClassName('toggle-menu-button')[0];
 const navbar = document.getElementsByClassName('navbar')[0];
 
 toggleButton.addEventListener('click', () =>{
-    navbar.classList.toggle('active');
+    navbar.classList.toggle('active-navbar');
 })
 
 
@@ -45,8 +45,8 @@ function showSlides(n) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" active-dot", "");
   }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  dots[slideIndex-1].className += " active-dot";
 }
