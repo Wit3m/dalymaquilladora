@@ -1,52 +1,62 @@
-//navbar scroll appear on scroll up
+//side navbar open and close
+let menuOpenBtn = document.querySelector(".bx-menu");
+let menuCloseBtn = document.querySelector(".bx-x");
+let navLinks = document.querySelector("nav");
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar-header").style.top = "0";
-  } else {
-    document.getElementById("navbar-header").style.top = "-200px";
+menuOpenBtn.addEventListener("click", ()=>{
+  navLinks.style.left = "0";
+});
+
+menuCloseBtn.addEventListener("click", ()=>{
+  navLinks.style.left = "-100%";
+});
+
+// GALLERY FILTER
+filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("gallery-column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
   }
-  prevScrollpos = currentScrollPos;
 }
 
-//navbar button
-
-const toggleButton = document.getElementsByClassName('toggle-menu-button')[0];
-const navbar = document.getElementsByClassName('navbar')[0];
-
-toggleButton.addEventListener('click', () =>{
-    navbar.classList.toggle('active-navbar');
-})
-
-
-//Carousel
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active-dot", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active-dot";
 }
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("button-container");
+var btns = btnContainer.getElementsByClassName("gallery-btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("gallery-active");
+    current[0].className = current[0].className.replace("gallery-active", "");
+    this.className += " gallery-active";
+  });
+}
+

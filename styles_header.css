@@ -1,0 +1,207 @@
+/* --- HEADER --- */
+header {
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  height: 70px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+  /* transition: 1s; */
+  z-index: 100;
+}
+
+header .header-wrapper{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+
+header .header-wrapper a.logo-title {
+  height: 70px;
+  font-size: 2rem;
+  display:flex;
+  align-items: center;
+}
+header .header-wrapper a img.logo{
+  width: 3rem;
+  height: 3rem;
+}
+
+header .header-wrapper a.logo-title h1{
+  font-size: 2rem;
+  padding-left: 1rem;
+}
+
+header nav{
+  line-height: 70px;
+  height: 100%;
+}
+
+header nav ul{
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  display:flex;
+}
+
+header nav ul li{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 0.8rem;
+}
+
+header nav ul li a{
+  height: 100%;
+  white-space: nowrap;
+}
+
+header nav ul li .arrow{
+  height: 100%;
+  line-height: 70px;
+  text-align: center;
+  display: inline-block;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+header nav ul li .sub-menu{
+  position: absolute;
+  top: 70px;
+  left: 0;
+  line-height: 40px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+  display: none;
+}
+header nav ul li a:hover{
+  text-decoration: underline;
+}
+header nav ul li:hover .sub-menu{
+  display:block;
+}
+header nav ul li:hover .arrow{
+  transform: rotate(180deg);
+  color: goldenrod;
+}
+header nav .sidebar-logo,
+header .bx-menu{
+  display: none;
+}
+.coming-soon .tooltip-coming-soon{
+  visibility: hidden;
+  width: 120px;
+  background-color:#bbb;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  top:80%;
+  left:50%;
+  margin-left:-60px;
+  line-height:1rem;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+.coming-soon .tooltip-coming-soon::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #bbb transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.coming-soon:hover .tooltip-coming-soon{
+  visibility: visible;
+}
+
+@media (max-width:950px){
+  header .bx-menu{
+    display: block;
+  }
+
+  header nav{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    display: block;
+    max-width: 270px;
+    width: 100%;
+    background: white;
+    line-height: 40px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    z-index: 1000;
+  }
+
+  header .header-wrapper{
+    justify-content: space-between;
+  }
+
+  header nav .sidebar-logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header .bx-menu{
+    font-size: 2rem;
+    color:#333;
+  }
+
+  header nav .sidebar-logo .logo-name,
+  header nav .sidebar-logo .bx-x{
+    font-size: 1.3rem;
+    color:#333;
+  }
+
+  header nav .links{
+    display: block;
+    margin-top: 1rem;
+  }
+  header nav .links li{
+    display: block;
+  }
+  header nav .links .sub-menu{
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+  }
+  header nav .links .sub-menu li{
+    line-height: 2rem;
+  }
+  header nav ul li .arrow{
+    line-height: 1rem;
+  }
+  header nav .links .sub-menu{
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+  }
+  .coming-soon .tooltip-coming-soon{
+    top: 10px;
+    left: 70%;
+  }
+  .coming-soon .tooltip-coming-soon::after {
+    display: none;
+  }
+}

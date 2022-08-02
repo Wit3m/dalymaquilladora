@@ -1,30 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="UTF-8">
     <meta name="description" content="Maquillaje personalizado y a domicilio en la CDMX. Reserva tu cita a domicilio con una maquilladora profesional.">
-    <meta name="keywords" content="Maquilladora, Maquillaje, Maquillador, Maquillista, Makeup, Boda, 15 años, eventos sociales">
+    <meta name="keywords" content="Maquilladora, Maquillaje, Maquillador, Maquillista, Makeup, a domicilio, Boda, 15 años, eventos sociales">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Daniela Maquillista Profesional</title>
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="styles_general.css">
+    <link rel="stylesheet" type="text/css" href="styles_header.css">
+    <link rel="icon" href="img/icon/logo-gold_48x48.jpg" type="image/x-icon">
+    <title>Daniela Maquilladora Profesional</title>
   </head>
   <body>
     <div id="content" class="content">
-      <header id="navbar-header" class="navbar-header">
-        <h1>LOGO</h1>
-        <a href="#" class="toggle-menu-button">
-          <span class="bar-menu-button"></span>
-          <span class="bar-menu-button"></span>
-          <span class="bar-menu-button"></span>
-        </a>
-        <nav class="navbar">
-          <ul>
-            <li><a href="#inicio">INICIO</a></li>
-            <li><a href="#servicios">SERVICIOS</a></li>
-            <!--<li><a href="#opinion">RESEÑAS</a></li>-->
-            <li><a href="#reserva">RESERVA</a></li>
-          </ul>
-        </nav>
+      <header>
+        <div class="header-wrapper">
+          <i class="bx bx-menu"></i>
+            <a href="#inicio" class="logo-title">
+              <img src="img/icon/logo-gold_48x48.jpg" alt="Logo Daniela Maquillista Domicilio" class="logo">
+              <h1 class="mobile-hide">Daly Maquilladora</h1>
+            </a>
+          <div class="slide-navbar-right-elem"></div>
+          <nav>
+            <div class="sidebar-logo">
+              <h1 class="logo-name"><a href="#inicio">Daly Maquilladora</a></h1>
+              <i class="bx bx-x"></i>
+            </div>
+            <ul class="links">
+              <li>
+                <a href="#services">Servicios</a>
+                <i class='bx bxs-chevron-down arrow' ></i>
+                <ul class="sub-menu">
+                  <li><a href="#novia">Novia</a></li>
+                  <li><a href="#15anos">15 años</a></li>
+                  <li><a href="#eventos">Social & eventos</a></li>
+                  <li><a href="#editorial">Editorial</a></li>
+                  <li><a href="#caso-piel">Casos de piel</a></li>
+                  <li><a href="#drag">Drag</a></li>
+
+                </ul>
+              </li>
+              <li class="coming-soon"><a href="#cursos">Cursos</a>
+                <span class="tooltip-coming-soon">Coming soon!</span>
+              </li>
+              <li><a href="#gallery">Galeria</a></li>
+              <li><a href="#about">Acerca de mi</a></li>
+              <!--<li><a href="#opinion">RESEÑAS</a></li>-->
+              <li><a href="#reserva">Reserva</a></li>
+            </ul>
+          </nav>
+        </div>
       </header>
       <main>
         <article id="inicio" class="inicio">
@@ -35,135 +61,170 @@
             <a class="button" href="#reserva">RESERVA AHORA</a>
           </div>
         </article>
+        <div class="main-content">
+          <article id="services" class="services">
+            <h2>Servicios</h2>
+            <h3>Tu maquillaje personalizado de acuerdo a tu rostro, vestimenta y personalidad
+              <br/>cuidando cada detalle para que te sientas cómoda</h3>
+            <div class="services-container">
+              <img class ="img-service" src="img/pexels-freestocksorg-457701.jpg" alt="Wedding makeup boda novia evento">
+              <div class="services-list">
+                <details>
+                  <summary><h4 id="novia">Novia</h4></summary>
+                  <p>Un maquillaje especial para el día más importante de tu vida.</p>
+                </details>
+                <details>
+                  <summary><h4 id="15anos">15 años</h4></summary>
+                  <p>Un maquillaje que haga resaltar tu belleza natural y que te sientes segura para esta etapa en tu vida.</p>
+                </details>
+                <details>
+                  <summary><h4 id="eventos">Social & eventos</h4></summary>
+                  <p>¿Una boda, cita especial, cumpleaños importantes? <br>
+                    El maquillaje social es para cualquier evento de día o de noche.</p>
+                </details>
+                <details>
+                  <summary><h4 id="editorial">Editorial</h4></summary>
+                  <p>El maquillaje editorial se trabaja especificamente para sesión de fotos en estudio para tu book de modelo, portadas de revista.</p>
+                </details>
+                <details>
+                  <summary><h4 id="drag">Drag</h4></summary>
+                  <p>Un maquillaje de acuerdo a tu personalidad.</p>
+                </details>
+                <details>
+                  <summary><h4 id="caso-piel">Resolución de casos de piel</h4></summary>
+                  <p>Un maquillaje para cualquier evento trabajado para esconder tatuajes, manchas, vitiligo, rosacias, etc...</p>
+                </details>
+                </ul>
+              </div>
+            </div>
+          </article>
 
-        <article id="description" class="description">
-          <h2>Descripción</h2>
-            <p class="desc-content">
-            Ofrecemos servicios de alta calidad con productos unicamente de gama alta, 
-            un maquillaje de acuerdo a tu personalidad, vestimenta y rostro, 
-            cuidando cada detalle para que te sientas cómoda. <br>
-            Maquillaje que dura todo tu evento.</p>
-        </article>
+          <!--<hr class="section-sep">
+          <article id="course">
+            <h2>Reserva tu clase de automaquillaje</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Reiciendis quibusdam provident, exercitationem ducimus non
+              nisi corrupti natus repellendus possimus porro adipisci deserunt
+              doloribus cumque dicta laboriosam ad, voluptatum eaque eveniet!</p>
+          </article>
+          -->
 
-        
-        <article id="productos" class="productos">
-          <div class="carousel-services">
-            <h2>Los diferentes servicios</h2>
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
+          <hr class="section-sep">
+          <article id="gallery" class="gallery">
+            <h2>Galeria</h2>
+            <div id="button-container" class="button-container">
+              <button class="button gallery-btn gallery-active" onclick="filterSelection('all')">Todos</button>
+              <button class="button gallery-btn" onclick="filterSelection('novia')">Novia</button>
+              <!-- <button class="button gallery-btn" onclick="filterSelection('15')"> 15 años</button>-->
+              <button class="button gallery-btn" onclick="filterSelection('eventos')">Eventos</button>
+              <button class="button gallery-btn" onclick="filterSelection('drag')">Drag</button>
+              <button class="button gallery-btn" onclick="filterSelection('casos')">Casos de piel</button>
+              <button class="button gallery-btn" onclick="filterSelection('editorial')">Editorial</button>
+            </div>
+            <div class="gallery-container">
+              <figure class="gallery-column editorial">
+                  <img src="img/gallery/editorial_01_001.jpeg" class="gallery-img" alt="Editorial Magazine Profesional Makeup Portrait">
+              </figure>
+              <figure class="gallery-column editorial">
+                  <img src="img/gallery/editorial_01_002.jpeg" class="gallery-img" alt="Editorial Magazine Profesional Makeup Portrait">
+              </figure>
+              <figure class="gallery-column drag">
+                  <img src="img/gallery/drag_01_001.jpeg" class="gallery-img" alt="Dragqueen makeup LGBT Drag Maquillaje Rosa">
+              </figure>
+              <figure class="gallery-column drag">
+                  <img src="img/gallery/drag_01_003.jpeg" class="gallery-img" alt="Dragqueen makeup LGBT Drag Maquillaje Estrella">
+              </figure>
+              <figure class="gallery-column casos">
+                  <img src="img/gallery/casos-piel-tatuaje_01_002.jpg" class="gallery-img" alt="Casos de piel Tatuaje Tatoo">
+              </figure>
+              <figure class="gallery-column casos">
+                <img src="img/gallery/casos-piel-tatuaje_01_003.jpg" class="gallery-img" alt="Casos de piel Tatuaje Tatoo">
+              </figure>
+              <figure class="gallery-column casos">
+                  <img src="img/gallery/casos-piel-vitiligo_01_002.jpeg" class="gallery-img" alt="Casos de piel Paño Vitiligo Mancha Patches Skin">
+              </figure>
+              <figure class="gallery-column casos">
+                <img src="img/gallery/casos-piel-vitiligo_01_003.jpg" class="gallery-img" alt="Casos de piel Paño Vitiligo Mancha Patches Skin">
+              </figure>
+              <figure class="gallery-column eventos">
+                <img src="img/gallery/social_01_001.jpeg" class="gallery-img" alt="Maquillaje social evento de noche makeup artist">
+              </figure>
+              <figure class="gallery-column eventos">
+                <img src="img/gallery/social_02_001.jpeg" class="gallery-img" alt="Maquillaje social evento de noche makeup artist">
+              </figure>
+              <figure class="gallery-column eventos">
+                <img src="img/gallery/social_03_001.jpeg" class="gallery-img" alt="Maquillaje social evento de noche makeup artist">
+              </figure>
+              <figure class="gallery-column eventos">
+                <img src="img/gallery/social_04_001.jpeg" class="gallery-img" alt="Maquillaje social evento de noche makeup artist">
+              </figure>
+              <figure class="gallery-column eventos">
+                <img src="img/gallery/social_05_001.jpeg" class="gallery-img" alt="Maquillaje social evento de noche makeup artist">
+              </figure>
+              <figure class="gallery-column eventos">
+                <img src="img/gallery/social_05_002.jpeg" class="gallery-img" alt="Maquillaje social evento de noche makeup artist">
+              </figure>
+              <figure class="gallery-column eventos">
+                <img src="img/gallery/social_06_001.jpeg" class="gallery-img" alt="Maquillaje social evento de noche makeup artist">
+              </figure>
+              <figure class="gallery-column eventos">
+                <img src="img/gallery/social_07_001.jpeg" class="gallery-img" alt="Maquillaje social evento de noche makeup artist">
+              </figure>
+              <figure class="gallery-column eventos">
+                <img src="img/gallery/social_07_002.jpeg" class="gallery-img" alt="Maquillaje social evento de noche makeup artist">
+              </figure>
+              <figure class="gallery-column eventos">
+                <img src="img/gallery/social_07_003.jpeg" class="gallery-img" alt="Maquillaje social evento de noche makeup artist">
+              </figure>
+              <figure class="gallery-column eventos">
+                <img src="img/gallery/social_08_001.jpeg" class="gallery-img" alt="Maquillaje social evento de noche makeup artist">
+              </figure>
+              <figure class="gallery-column eventos">
+                <img src="img/gallery/social_08_002.jpeg" class="gallery-img" alt="Maquillaje social evento de noche makeup artist">
+              </figure>
+            </div>
+          </article>
 
-              <!-- Full-width images with number and caption text -->
-              <div class="mySlides fade">
-                <div class="numbertext">1 / 2</div>
-                <img src="img/pexels-pixabay-458766.jpg" alt="novia maquillaje modelo" style="width:100%">
-                <div class="title">Tradicional</div>
-                <div class="service-description">
-                  <h4>Paquete tradicional - $800</h4>
-                  <ul>
-                    <li>Servicio completo de hidratación</li>
-                    <li>Base de maquillaje</li>
-                    <li>Correcciones</li>
-                    <li>Aplicación de pestañas</li>
+  <!--    <hr class="section-sep">
+          <article id="opinion">
+            <h2>Reseñas</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+              Consequatur est exercitationem nesciunt reprehenderit 
+              aliquam molestiae obcaecati debitis, in similique veniam
+              dolore impedit aperiam! Unde repellendus odio eaque
+              fugiat! At, recusandae.</p>
+          </article>
+  -->
+
+          <hr class="section-sep">
+          <article id="about" class="about">
+            <h2>Acerca de mi</h2>
+            <div class="about-wrapper">
+              <section class="about-description">
+                <h3>My moto</h3>
+                <p>Graduada de la prestigiosa escuela de maquillaje Cristina Cuellar</p>
+              </section>
+              <section class="contact-section">
+                <img class="my-portrait" src="img/daniela-maquillista-profesional.jpeg" alt="Daniela maquillista profesional a domicilio">
+                <div class="contact-info">
+                  <p class="contact-content"><a href="tel:5554637426">Teléfono: 55 5463 7426</a></p>
+                  <ul class="socials">
+                    <li><a href="https://www.instagram.com/dalymaquilladora/">
+                        <img class="socials-icon" src="img/socials/Instagram-logo.png" alt="Instagram account" target="_blank"></a></li>
+                    <li><a href="https://wa.me/+525554637426?text=Buenos%20días,%20quisiera%20tener%20más%20información%20sobre%20sus%20servicios."  target="_blank">
+                        <img class="socials-icon" src="img/socials/WhatsApp-logo.png" alt="Send a whatsapp"></a></li>
+                    <li><a href="mailto:ddalynee@gmail.com"  target="_blank">
+                        <img class="socials-icon" src="img/socials/Gmail_icon_(2020).svg" alt="Send an email"></a></li>
                   </ul>
                 </div>
-              </div>
-
-              <div class="mySlides fade">
-                <div class="numbertext">2 / 2</div>
-                <img src="img/pexels-freestocksorg-457701.jpg" alt="maquillaje studio makeup" style="width:100%">
-                <div class="title">Completo</div>
-                <div class="service-description">
-                  <h4>Paquete completo - $1,200</h4>
-                  <ul>
-                    <li>Maquillaje tridimensional</li>
-                    <li>Estudio de visagismo</li>
-                    <li>Servicio completo de hidratación</li>
-                    <li>Base de maquillaje</li>
-                    <li>Correcciones</li>
-                    <li>Aplicación de pestañas</li>
-                  </ul>
-                </div>
-              </div>
-<!--
-              <div class="mySlides fade">
-                <div class="numbertext">3 / 3</div>
-                <img src="img/pexels-pixabay-458766.jpg" style="width:100%">
-                <div class="title">Elite</div>
-                <div class="description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Dicta sapiente ut soluta magnam porro minus. <br>
-                  Ab quod quasi itaque asperiores sint, consectetur sed laboriosam dolorum rem illum nihil. <br>
-                  Quisquam, voluptate!  Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>
-                  Labore alias eius vitae!
-                </div>
-              </div>
--->
-
-              <!-- Next and previous buttons -->
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </section>
             </div>
-            <br>
+          </article>
 
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-              <span class="dot" onclick="currentSlide(1)"></span>
-              <span class="dot" onclick="currentSlide(2)"></span>
-              <!-- <span class="dot" onclick="currentSlide(3)"></span> -->
-            </div>
-          </div>
-        </article>
 
-<!--       <article id="servicios" class="servicios">
-          <h2></h2>
-          <div class="servicios-grid">
-            <section class="service-list">
-              <span class="service-num">1</span>
-              <h3>Diagnostico</h3>
-              <p>Estudio de la cara y del tono de piel, consejos, psychología</p>
-            </section>
-            <section class="service-list">
-              <span class="service-num">2</span>
-              <h3>Limpieza</h3>
-              <p>Limpieza de la cara todo bonito</p>
-            </section>
-            <section class="service-list">
-              <span class="service-num">3</span>
-              <h3>Hidratación</h3>
-              <p>Agua en la cara e hidratación</p>
-            </section>
-            <section class="service-list">
-              <span class="service-num">4</span>
-              <h3>Fondo</h3>
-              <p>Tono de piel, aplicación del fondo</p>
-            </section>
-            <section class="service-list">
-              <span class="service-num">5</span>
-              <h3>Medio</h3>
-              <p>Cachetes, colores, muy bonito</p>
-            </section>
-            <section class="service-list">
-              <span class="service-num">6</span>
-              <h3>Finición</h3>
-              <p>Ojos y boca, cejas, labial</p>
-            </section>
-          </div>
-        </article>
-      -->
-<!--        <hr class="section-sep">
-        <article id="opinion">
-          <h2>Reseñas</h2>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Consequatur est exercitationem nesciunt reprehenderit 
-            aliquam molestiae obcaecati debitis, in similique veniam
-            dolore impedit aperiam! Unde repellendus odio eaque
-            fugiat! At, recusandae.</p>
-        </article>
--->
-        <hr class="section-sep">
-        <article id="reserva" class="reserva">
-          <h2>¡Haz tu cita!</h2>
-          <div class=contact-grid>
+          <hr class="section-sep">
+          <article id="reserva" class="reserva">
+            <h2>¡Haz tu cita!</h2>
             <section class="contact-form-container">
               <form method="post" action="https://getform.io/f/0320df70-9e17-458a-9d36-03e688a14070" target="_blank">
                 <h3>Contáctanos</h3>
@@ -182,45 +243,8 @@
                 <input type="submit" value="Enviar">
               </form>
             </section>
-            <section class="contact-section">
-              <div class="contact-info">
-                <h3>Télefono / WhatsApp</h3>
-                <p class="contact-content"><a href="tel:5554637426">55 5463 7426</a></p>
-                <h3>Email</h3>
-                <p class="contact-content"><a href="mailto:micorreo@gmail.com">micorreo@gmail.com</a></p>
-              </div>
-              <img class="my-portrait" src="img/daniela-maquillista-profesional.jpeg" alt="Daniela maquillista profesional a domicilio">
-            </section>
-          </div>
-        </article>
-
-<!--        <article id="galeria">
-          <h2>Galeria</h2>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Consequatur est exercitationem nesciunt reprehenderit 
-            aliquam molestiae obcaecati debitis, in similique veniam
-            dolore impedit aperiam! Unde repellendus odio eaque
-            fugiat! At, recusandae.</p>
-        </article>
-
-
-
-        <article id="about">
-          <h2>Acerca de mi</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Reiciendis quibusdam provident, exercitationem ducimus non
-             nisi corrupti natus repellendus possimus porro adipisci deserunt
-             doloribus cumque dicta laboriosam ad, voluptatum eaque eveniet!</p>
-        </article>
-
-        <article id="course">
-          <h2>Reserva tu clase de automaquillaje</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Reiciendis quibusdam provident, exercitationem ducimus non
-             nisi corrupti natus repellendus possimus porro adipisci deserunt
-             doloribus cumque dicta laboriosam ad, voluptatum eaque eveniet!</p>
-        </article> -->
-
+          </article>
+        </div>
         <a href="https://wa.me/+525554637426?text=Buenos%20días,%20quisiera%20tener%20más%20información%20sobre%20sus%20servicios."
           class="wa-button" target="_blank">
           <img class="wa-button-icon"
@@ -232,13 +256,13 @@
       <hr class="section-sep">
       <footer>
         <ul>
-          <li><a href="https://www.instagram.com">
+          <li><a href="https://www.instagram.com/dalymaquilladora/">
               <img class="socials-icon" src="img/socials/Instagram-logo.png" alt="Instagram account" target="_blank"></a></li>
           <li><a href="https://wa.me/+525554637426?text=Buenos%20días,%20quisiera%20tener%20más%20información%20sobre%20sus%20servicios."  target="_blank">
               <img class="socials-icon" src="img/socials/WhatsApp-logo.png" alt="Send a whatsapp"></a></li>
         </ul>
         <div class="copyright">
-          <p>Daniela © 2021</p>
+          <p>Daly Maquilladora © 2022</p>
         </div>
       </footer>
 
