@@ -284,20 +284,39 @@ input[type=submit]:hover {
 main .about .about-wrapper{
   margin:0rem 2rem;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(5,1fr);
   grid-gap:1rem;
 }
-.contact-content{
-  list-style: none;
-  font-size: 20px;
-  margin-top:1rem;
+
+main .about .about-description{
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
-.contact-section{
+
+main .about .contact-section{
+  grid-column-start: 4;
+  grid-column-end: 6;
   align-self: center;
   display:grid;
   grid-gap:8px;
   grid-template-columns: repeat(1,1fr);
 }
+
+main .about .presentation-title{
+  font-size:2rem;
+  margin:1rem;
+}
+
+main .about .presentation{
+  font-size:1.3rem;
+}
+
+.contact-content{
+  list-style: none;
+  font-size: 20px;
+  margin-top:1rem;
+}
+
 
 .contact-info{
   text-align:center;
@@ -323,6 +342,9 @@ main .about .socials li a{
 main .about .socials li a:hover{
   opacity: 0.6;
 }
+
+
+
 /* --- FOOTER --- */
 footer ul{
   display: flex;
@@ -379,7 +401,7 @@ footer .copyright{
     width:200px;
   }
 }
-@media (max-width: 850px){
+@media (max-width: 950px){
   /* INICIO */ 
   .inicio h1{
     font-size:36px;
@@ -389,9 +411,6 @@ footer .copyright{
     font-size: 20px;
   }
   
-  .servicios-grid{
-    grid-template-columns: repeat(2,1fr)
-  }
   
   /* RESERVA */
   .contact-section{
@@ -403,6 +422,16 @@ footer .copyright{
 
   main .about .about-wrapper{
     grid-template-columns: repeat(1,1fr);
+  }
+
+  main .about .about-description{
+    grid-column-start: auto;
+    grid-column-end: auto;
+  }
+  
+  main .about .contact-section{
+    grid-column-start: auto;
+    grid-column-end: auto;
   }
 }
 @media (max-width: 600px){
