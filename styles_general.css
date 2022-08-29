@@ -263,6 +263,12 @@ details > p{
   aspect-ratio: 2/3;
 }
 
+.gallery-img:hover{
+  cursor:zoom-in;
+  opacity:0.7;
+}
+
+
 @media (max-width: 1200px){
   .gallery-container {
   grid-auto-columns: 40%;
@@ -273,6 +279,45 @@ details > p{
   .gallery-container {
   grid-auto-columns: 85%;
   }
+}
+
+.image-view{
+  position: fixed;
+  z-index: 200;
+  top:0;
+  height: 100vh;
+  width: 100%;
+  background: rgb(0, 0, 0, 0.8);
+  display: none;
+}
+
+.image-box{
+  position: fixed;
+  z-index: 201;
+  width: 60vw;
+  height: 70vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display:none;
+}
+
+.prev-btn, .next-btn {
+  padding: 3rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  color: white;
+  font-size: 3rem;
+  transition: 0.6s ease;
+}
+
+.prev-btn{
+  left: -5rem;
+}
+
+.next-btn{
+  right:-5rem;
 }
 
 /* --- RESERVA --- */

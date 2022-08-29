@@ -60,3 +60,50 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
+
+
+// GALLERY MODAL VIEW
+const zoomBtn = document.querySelectorAll('.gallery-img');
+const allImages = document.querySelectorAll('.gallery-container');
+const imageView = document.querySelector('.image-view');
+const nextBtn = document.querySelector('next-btn');
+const prevBtn = document.querySelector('prev-btn');
+const imageBox = document.querySelector('.image-box');
+let slides = document.getElementsByClassName("gallery-img");
+let slideIndex = 0;
+
+let imgPath ='';
+function getPath(img){
+  imgPath = img.src;
+}
+
+function currentImageDisplay(path){
+  imageBox.style.background = `url(${path}) center/contain no-repeat`;
+}
+
+imageView.addEventListener('click', function(){
+  this.style.display = "none";
+  imageBox.style.display = "none";
+})
+
+zoomBtn.forEach(function(btn, index){
+  btn.addEventListener('click', function(){
+      imageView.style.display = "block";
+      imageBox.style.display = "block";
+      slideIndex = index;
+      currentImageDisplay(imgPath);
+  })
+})
+
+function plusSlides(n) {
+  if(slideIndex == 0 && n < 0){
+  } else if(slideIndex+1 == slides.length && n >0){
+  } else{
+    slideIndex += n;
+  }
+  currentImageDisplay(slides[slideIndex].src);
+}
+
+
+
+
