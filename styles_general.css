@@ -210,6 +210,10 @@ details > p{
   .services .services-container{
     grid-template-columns: repeat(1,1fr);
   }
+  .services .services-container .services-list{
+    grid-column: 1;
+    max-width: 100%;
+  }
 }
 /* --- GALLERY --- */
 
