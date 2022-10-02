@@ -162,13 +162,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ff0000', e
 }
 .services .services-container{
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(4,1fr);
   grid-gap:0.6rem;
   margin: 1rem;
 }
 
 .services .services-container .img-service{
   grid-column: 1 / span 2;
+  max-width: 100%;
+}
+
+.services .services-container .services-list{
+  grid-column: 3 / span 2;
   max-width: 100%;
 }
 
